@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:trth="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<table width="50%" border="1" align="center">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+        </tr>
+        <tr th:each="u:${list}">
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.age}"></td>
+        </tr>
+    </table>-->
+    <table width="50%" border="1" align="center">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+        </tr>
+        <tr th:each="maps:${map}">
+            <td th:each="ensy:${maps}"th:text="${ensy.value.id}"></td>
+            <td th:each="ensy:${maps}"th:text="${ensy.value.name}"></td>
+            <td th:each="ensy:${maps}"th:text="${ensy.value.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>

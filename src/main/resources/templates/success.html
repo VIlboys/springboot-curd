@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:trth="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Thymeleaf的使用
+    <hr>
+    <!--<span th:text="${msg}"></span>-->
+    <h4>thymeleaf的if和swidth</h4>
+    <span th:if="${sex}=='男'">
+    性别为:<span th:text="${sex}"></span>
+    </span>
+    <span th:if="${sex}=='女'">
+    性别为：<span th:text="${sex}"></span>
+    </span>
+    <hr/>
+    <div th:text="${map}"></div><!--不会转义特殊字符-->
+    <div th:utext="${map}"></div><!--和上面相反-->
+    <hr/>
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+    <hr>
+    <span  th:each="user:${users}">[[${user}]]</span>
+
+</body>
+</html>
